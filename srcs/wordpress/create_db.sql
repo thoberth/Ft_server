@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS wp_db;
+GRANT ALL ON wp_db.* TO 'admin'@'localhost' IDENTIFIED BY 'admin';
+FLUSH PRIVILEGES;

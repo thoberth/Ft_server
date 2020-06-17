@@ -1,0 +1,1 @@
+mv var/www/localhost/index.html var/www/localhost/index.txt
