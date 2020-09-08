@@ -17,22 +17,14 @@ server {
    	ssl_certificate_key /localhost-key.pem;
 	
 	#root
-	root /var/www/localhost;
+	root /var/www/;
 	# Add index.php to the list if you are using PHP
 	index index.php index.html index.nginx-debian.html;
 
 	server_name localhost www.localhost;
 
 	location / {
-		autoindex on;
-	}
-
-	location /wordpress {
-        try_files $uri $uri/ /index.php?;
-	}
-
-	location /phpmyadmin {
-        try_files $uri $uri/ /index.php?;
+		try_files $uri $uri/ =404;
 	}
 
 	#PHP FPM config
